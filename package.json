@@ -1,0 +1,36 @@
+{
+  "name": "example-typescript-app",
+  "version": "1.0.0",
+  "description": "Typescript example",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "compile": "tsc --declaration",
+    "lint": "tslint --project tsconfig.json",
+    "prepublish": "npm run compile",
+    "test": "mocha",
+    "customTest": "npx mocha --require tsx src/tests/**/*.spec.ts 2>&1 | tee console-log.txt"
+  },
+  "directories": {
+    "lib": "./lib",
+    "src": "./src",
+    "test": "./src"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^5.0.0",
+    "@types/mocha": "^10.0.9",
+    "@types/supertest": "^6.0.2",
+    "chai": "^5.1.1",
+    "jsonpath-plus": "^9.0.0",
+    "jsonschema": "^1.4.1",
+    "mocha": "^10.7.3",
+    "supertest": "^7.0.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^5.6.3",
+    "tsx": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
